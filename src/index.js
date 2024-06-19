@@ -11,5 +11,7 @@ app.listen(3000, async() => {
   // const tweet = await Tweet.create({
   //   content: '3rd tweet',
   // });
+  // console.log(tweet); 
+  // const tweet = await Tweet.find({'userEmail': 'a@b.com'});
   // console.log(tweet);
 });
