@@ -1,6 +1,6 @@
 const Tweet = require('../models/tweet.js');
 
-class TweetRepository {    
+class TweetRepository {
     async create(data) {
         try {
             const tweet = await Tweet.create(data);
@@ -13,36 +13,36 @@ class TweetRepository {
 
     async get(id) {
         try {
-          const tweet = await Tweet.findById(id);
+            const tweet = await Tweet.findById(id);
             return tweet;
         } catch (error) {
             console.log(error);
         }
     }
     
-    async update(id,data) {
-          try {
-            const tweet = await Tweet.findByIdAndUpdate(id, data, {new : true});
-              return tweet;
-          } catch (error) {
-              console.log(error);
-          }
+    async update(id, data) {
+        try {
+            const tweet = await Tweet.findByIdAndUpdate(id, data, { new: true });
+            return tweet;
+        } catch (error) {
+            console.log(error);
+        }
     }
     
     async destroy(id) {
-          try {
+        try {
             const tweet = await Tweet.findByIdAndRemove(id);
-              return tweet;
-          } catch (error) {
-              console.log(error);
-          }
+            return tweet;
+        } catch (error) {
+            console.log(error);
+        }
     }
   
     async getWithComments(id) {
-      try {
-        const tweet = await Tweet.findById(id).populate({
-          path: 'comments',
-          }).lean();
+        try {
+            const tweet = await Tweet.findById(id).populate({
+                path: 'comments',
+            }).lean();
             return tweet;
         } catch (error) {
             console.log(error);
