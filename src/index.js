@@ -24,6 +24,8 @@ app.listen(3000, async() => {
   // const tweet = await tweetRepo.getWithComments('6672f8a2c6fce5f75200512f');
   // console.log(tweet);
   
-  const tweet = await tweetRepo.getAll(2,4);
-  console.log(tweet);
+  // const tweet = await tweetRepo.getAll(2,4);
+  // console.log(tweet);
+  
+  
 });
