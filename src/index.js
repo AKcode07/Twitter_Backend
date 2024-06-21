@@ -8,6 +8,5 @@ app.listen(3000, async() => {
   console.log('Server started on port 3000');
   await connect();
   console.log('Mongo db Connected');
-  const tweetRepo = new TweetRepository();
-  
+
 });
