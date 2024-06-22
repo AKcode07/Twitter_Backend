@@ -1,4 +1,4 @@
-const Hashtag = require("../models/hashtags.js");
+const Hashtag = require("../models/hastag");
 class HashtagRepository {
   async create(data) {
     try {

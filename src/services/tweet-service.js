@@ -1,12 +1,12 @@
 const {
   TweetRepository,
-  // HashtagRepository,
+  HashtagRepository,
 } = require("../repository/index.js");
 
 class TweetService {
   constructor() {
     this.tweetRepository = new TweetRepository();
-    // this.hashtagRepository = new HashtagRepository();
+    this.hashtagRepository = new HashtagRepository();
   }
 
   async create(data) {
