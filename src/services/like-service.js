@@ -23,9 +23,9 @@ class LikeService {
     });
     console.log("exists", exists);
     if (exists) {
-      likeable.likes.pull(exists.id);
+      likeable.likes.pull(exists.id); // Assuming exists has an _id field
       await likeable.save();
-      await exists.remove();
+      await this.likeRepository.destroy(exists.id);
       var isAdded = false;
     } else {
       const newLike = await this.likeRepository.create({
@@ -43,3 +43,5 @@ class LikeService {
 }
 
 export default LikeService;
+
+
