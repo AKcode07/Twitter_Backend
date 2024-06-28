@@ -9,7 +9,7 @@ describe("Create tweet tests", () => {
       content: "Testing tweet",
     };
     const spy = jest.spyOn(Tweet, "create").mockImplementation(() => {
-      return { ...data, createdAt: "2022-02-12", updatedAt: "2022-02-12" };
+      return { ...data, createdAt: "2024-06-28", updatedAt: "2024-06-28" };
     });
     const tweetRepository = new TweetRepository();
     const tweet = await tweetRepository.create(data);
