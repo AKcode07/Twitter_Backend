@@ -40,9 +40,9 @@ describe("Get all tweet tests", () => {
       content: "Testing tweet",
     };
     const tweetsArray = [
-      { ...data, createdAt: "2022-02-12", updatedAt: "2022-02-12" },
-      { ...data, createdAt: "2022-02-12", updatedAt: "2022-02-12" },
-      { ...data, createdAt: "2022-02-12", updatedAt: "2022-02-12" },
+      { ...data, createdAt: "2024-06-28", updatedAt: "2024-06-28" },
+      { ...data, createdAt: "2024-06-28", updatedAt: "2024-06-28" },
+      { ...data, createdAt: "2024-06-28", updatedAt: "2024-06-28" },
     ];
     const findResponse = { tweetsArray };
     findResponse.skip = jest.fn((offset) => findResponse);
